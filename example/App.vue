@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img src="./assets/logo.png"> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <be-button size="large" round @click="handleClick" disabled>哈哈</be-button>
   </div>
 </template>
 
@@ -13,6 +14,11 @@ export default {
   components: {
     HelloWorld,
   },
+  methods: {
+    handleClick() {
+      alert(1)
+    }
+  }
 };
 </script>
 

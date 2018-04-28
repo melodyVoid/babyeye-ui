@@ -23,7 +23,7 @@ module.exports = {
   // tweak internal webpack configuration.
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
   chainWebpack: () => {},
-  configureWebpack: config => {
+  configureWebpack: (config) => {
     if (process.env.NODE_ENV === 'production') {
       // mutate config for production...
     } else {
@@ -53,7 +53,7 @@ module.exports = {
 
     // Enable CSS modules for all css / pre-processor files.
     // This option does not affect *.vue files.
-    modules: false
+    modules: false,
   },
 
   // use thread-loader for babel & TS in production build
@@ -78,11 +78,11 @@ module.exports = {
     hotOnly: false,
     // See https://github.com/vuejs/vue-cli/blob/dev/docs/cli-service.md#configuring-proxy
     proxy: null, // string | Object
-    before: app => {}
+    before: (app) => {},
   },
 
   // options for 3rd party plugins
   pluginOptions: {
     // ...
-  }
-}
+  },
+};
