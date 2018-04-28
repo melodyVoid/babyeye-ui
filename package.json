@@ -1,12 +1,36 @@
 {
   "name": "babyeye-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "A babyeye ui lib implement by Vue",
+  "author": "Dylan <botao@babyeye.com>",
+  "main": "packages/index.js",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melodyVoid/babyeye-ui.git"
+  },
+  "keywords": [
+    "components",
+    "library",
+    "common",
+    "babyeye",
+    "lib",
+    "Vue",
+    "UI"
+  ],
+  "bugs": {
+    "url": "https://github.com/melodyVoid/babyeye-ui/issues"
+  },
+  "homepage": "https://melodyvoid.github.io/babyeye-ui",
+  "files": [
+    "packages"
+  ],
+  "license": "MIT",
   "dependencies": {
     "vue": "^2.5.16"
   },
