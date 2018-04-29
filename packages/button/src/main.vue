@@ -64,7 +64,8 @@ export default {
   transition: all 0.2s;
   text-shadow: none;
   text-decoration: none;
-  border: none;
+  /* border: none; */
+  border: 2px solid #fd9c27;
   font-family: "Microsoft YaHei",Arial,sans-serif;
   font-weight: 400;
   cursor: pointer;
@@ -81,25 +82,21 @@ export default {
   height: 32px;
   font-size: 14px;
   border-radius: 3px;
+  box-sizing: border-box;
 }
 .be-btn-size-medium {
   min-width: 96px;
   height: 40px;
   font-size: 22px;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 .be-btn-size-large {
   min-width: 196px;
   height: 68px;
   font-size: 44px;
   border-radius: 5px;
-}
-.be-btn-disabled, .be-btn-disabled:hover, .be-btn-disabled:focus {
-  cursor: not-allowed;
-  border-color: #e6ebf5;
-  color: #b7bbc2;
-  background-color: #f3f4f5;
-  border-color: #e7e8eb;
+  box-sizing: border-box;
 }
 .be-btn-plain {
   background-color: rgba(250, 224, 193, 0.2);
@@ -115,5 +112,12 @@ export default {
 }
 .be-btn-round {
   border-radius: 35px;
+}
+.be-btn-disabled, .be-btn-disabled:hover, .be-btn-disabled:focus {
+  cursor: not-allowed;
+  border-color: #e6ebf5;
+  color: #b7bbc2;
+  background-color: #f3f4f5;
+  border-color: #e7e8eb;
 }
 </style>
