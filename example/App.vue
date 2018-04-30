@@ -2,7 +2,9 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <be-button size="large" italic round disabled @click="handleClick" >哈哈hhhhhhh</be-button>
+    <!-- <be-button size="large" italic round disabled @click="handleClick" >哈哈hhhhhhh</be-button> -->
+
+    <!-- <be-msg></be-msg> -->
   </div>
 </template>
 
@@ -18,6 +20,12 @@ export default {
     handleClick() {
       alert(1)
     }
+  },
+  mounted() {
+    this.$alert({
+      title: 'hhh',
+      message: ['hhhhh', 'dafsdfa']
+    })
   }
 };
 </script>

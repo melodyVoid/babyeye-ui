@@ -1,11 +1,15 @@
 import Button from './button'
+import MessageBox from './messageBox'
 
 const components = [
-  Button
+  Button,
+  MessageBox
 ]
 
 const install = (Vue, opts = {}) => {
   components.map(component => Vue.component(component.name, component))
+
+  Vue.prototype.$alert = MessageBox.installMessage
 }
 
 // 自动安装
@@ -15,5 +19,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export {
   install,
-  Button
+  Button,
+  MessageBox
 }
