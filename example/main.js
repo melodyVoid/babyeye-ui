@@ -8,7 +8,8 @@ const { MessageBox } = BabyeyeUI
 
 MessageBox.alert({
   message: '请遮盖右眼，进行左眼检查',
-  icon: 'fourlamp'
+  icon: 'fourlamp',
+  btnItalic: true
 })
 
 Vue.use(BabyeyeUI)

@@ -10,7 +10,8 @@ MessageBox.alert = (options = { title: '', icon: '', message: ''}) => {
     options = {
       title: '',
       icon: '',
-      message: options
+      message: options,
+      btnItalic: false
     }
   }
 

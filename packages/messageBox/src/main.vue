@@ -8,7 +8,7 @@
         {{ item }}
       </div>
       <div class="be-msg-btn">
-        <be-button @click="close">确定</be-button>
+        <be-button @click="close" :italic="btnItalic">确定</be-button>
       </div>
   </div>
   </div>
@@ -23,7 +23,8 @@ export default {
       title: '',
       message: '',
       icon: '',
-      isShow: true
+      isShow: true,
+      btnItalic: false
     }
   },
   // mounted() {
@@ -36,7 +37,7 @@ export default {
     },
     iconClass() {
       return {
-        [`icon-${this.icon}`]: true,
+        [`be-icon-${this.icon}`]: true,
         'be-msg-box-icon-circle': this.icon
       }
     }
@@ -88,26 +89,26 @@ export default {
     border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 50%;
   }
-  .icon-eyecheck {
+  .be-icon-eyecheck {
     background-image: url("../../../public/img/icon/icon-eyecheck.png");
   }
-  .icon-eyeposition {
+  .be-icon-eyeposition {
     background-image: url("../../../public/img/icon/icon-eyeposition.png");
   }
-  .icon-fourlamp {
+  .be-icon-fourlamp {
     background-image: url("../../../public/img/icon/icon-fourlamp.png");
   }
-  .icon-fusion {
+  .be-icon-fusion {
     background-image: url("../../../public/img/icon/icon-fusion.png");
   }
-  .icon-sensitivity {
+  .be-icon-sensitivity {
     background-image: url("../../../public/img/icon/icon-sensitivity.png");
   }
-  .icon-stecheck {
+  .be-icon-stecheck {
     background-image: url("../../../public/img/icon/icon-stecheck.png");
   }
   .be-msg-box-content {
-    line-height: 1.5;
+    line-height: 1.8;
   }
   .be-msg-btn {
     float: right;
