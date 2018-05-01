@@ -6,7 +6,7 @@ import * as BabyeyeUI from '../packages'
 
 const { MessageBox } = BabyeyeUI
 
-MessageBox.installMessage({
+MessageBox.alert({
   message: '请遮盖右眼，进行左眼检查',
   icon: 'fourlamp'
 })

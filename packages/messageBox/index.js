@@ -5,10 +5,11 @@ MessageBox.install = Vue => {
   Vue.component(MessageBox.name, MessageBox)
 }
 
-MessageBox.installMessage = (options = { title: '', message: ''}) => {
+MessageBox.alert = (options = { title: '', icon: '', message: ''}) => {
   if (typeof options === 'string' || typeof options === 'number') {
     options = {
       title: '',
+      icon: '',
       message: options
     }
   }

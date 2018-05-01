@@ -9,7 +9,7 @@ const components = [
 const install = (Vue, opts = {}) => {
   components.map(component => Vue.component(component.name, component))
 
-  Vue.prototype.$alert = MessageBox.installMessage
+  Vue.prototype.$alert = MessageBox.alert
 }
 
 // 自动安装
