@@ -4,6 +4,13 @@ import App from './App.vue';
 import * as BabyeyeUI from '../packages'
 // import { Button } from '../packages'
 
+const { MessageBox } = BabyeyeUI
+
+MessageBox.installMessage({
+  message: '请遮盖右眼，进行左眼检查',
+  icon: 'fourlamp'
+})
+
 Vue.use(BabyeyeUI)
 // Vue.use(Button)
 

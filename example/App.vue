@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
+    <img src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <be-button size="large" italic round disabled @click="handleClick" >哈哈hhhhhhh</be-button> -->
 
@@ -22,10 +22,10 @@ export default {
     }
   },
   mounted() {
-    this.$alert({
-      title: 'hhh',
-      message: ['hhhhh', 'dafsdfa']
-    })
+    // this.$alert({
+    //   title: 'hhh',
+    //   message: ['hhhhh', 'dafsdfa']
+    // })
   }
 };
 </script>
