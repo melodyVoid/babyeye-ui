@@ -25,12 +25,13 @@
 
 ### Options
 
-|   参数    |     说明     |     类型     |                          可选值                           | 默认值 |                       说明                       |
-| :-------: | :----------: | :----------: | :-------------------------------------------------------: | :----: | :----------------------------------------------: |
-|   title   |     标题     |    String    |                             -                             |   -    |          如果不配置 title 属性，则为空           |
-|  message  |     内容     | String/Array |                             -                             |   -    | 如果显示一条信息传字符串，如果显示多条信息传数组 |
-|   icon    |     图标     |    String    | eyecheck/eyeposition/foutlamp/fusion/sensitivity/stecheck |   -    |                                                  |
-| btnItalic | 按钮是否斜体 |   Boolean    |                             -                             | false  |                                                  |
+|   参数    |     说明     |     类型     |                          可选值                           | 默认值 |                         说明                          |
+| :-------: | :----------: | :----------: | :-------------------------------------------------------: | :----: | :---------------------------------------------------: |
+|   title   |     标题     |    String    |                             -                             |   -    |             如果不配置 title 属性，则为空             |
+|  message  |     内容     | String/Array |                             -                             |   -    |   如果显示一条信息传字符串，如果显示多条信息传数组    |
+|   icon    |     图标     |    String    | eyecheck/eyeposition/foutlamp/fusion/sensitivity/stecheck |   -    |                                                       |
+| btnItalic | 按钮是否斜体 |   Boolean    |                             -                             | false  |                                                       |
+|   size    |     尺寸     |    String    |                          large/                           |   -    | 如果设置 size 为 large,则显示为大弹框，否则是普通弹框 |
 
 ### Notice
 
@@ -51,7 +52,10 @@
           title: '我是标题',
           icon: 'fourlamp',
           message: '已检查完左眼，请换右眼',
-          btnItalic: true
+          btnItalic: true,
+          size: 'large'
+        }).then(() => {
+          	// callback
         })
       }
     }
@@ -68,7 +72,10 @@ MessageBox.alert({
   title: '我是标题',
   icon: 'fourlamp',
   message: '已检查完左眼，请换右眼',
-  btnItalic: true
+  btnItalic: true,
+  size: 'large'
+}).then(() => {
+    // callback
 })
 ```
 
