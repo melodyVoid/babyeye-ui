@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" v-if="isShow">
+  <div class="wrapper" v-if="isShow" :class="[size === 'large' ? 'large' : '']">
     <div class="be-msg-box">
       <div class="be-msg-box-title">{{ title }}</div>
       <div class="be-msg-box-icon" :class="iconClass">
@@ -8,7 +8,7 @@
         {{ item }}
       </div>
       <div class="be-msg-btn">
-        <be-button @click="close" :italic="btnItalic">确定</be-button>
+        <be-button @click="close" :italic="btnItalic" :size="btnSize">确定</be-button>
       </div>
   </div>
   </div>
@@ -24,12 +24,10 @@ export default {
       message: '',
       icon: '',
       isShow: true,
-      btnItalic: false
+      btnItalic: false,
+      size: ''
     }
   },
-  // mounted() {
-  //   this.close()
-  // },
   computed: {
     msg() {
       if (typeof this.message === 'string' || typeof this.message === 'number') return [this.message]
@@ -40,14 +38,18 @@ export default {
         [`be-icon-${this.icon}`]: true,
         'be-msg-box-icon-circle': this.icon
       }
+    },
+    btnSize() {
+      return this.size === 'large' ? 'medium' : 'small'
     }
   },
   components: {
     BeButton
   },
   methods: {
-    close() {
+    close(e) {
       this.isShow = false
+      this.$emit('click', e)
     }
   }
 }
@@ -60,13 +62,13 @@ export default {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.4);
+  z-index: 998;
 }
 .be-msg-box {
   width: 420px;
   position: fixed;
   padding: 10px;
   color: #fff;
-  // background-color: #5F6161;
   background:#697594;
   border-radius: 4px;
   top:50%;
@@ -77,7 +79,6 @@ export default {
   .be-msg-box-title {
     line-height: 40px;
     font-size: 20px;
-    // height: 40px;
   }
   .be-msg-box-icon {
     margin: 10px auto;
@@ -109,10 +110,39 @@ export default {
   }
   .be-msg-box-content {
     line-height: 1.8;
+    font-size: 16px;
   }
   .be-msg-btn {
     float: right;
     margin: 10px 30px 10px;
+  }
+}
+
+.large {
+  .be-msg-box {
+    width: 600px;
+    padding: 30px;
+    .be-msg-box-title {
+    line-height: 60px;
+    font-size: 28px;
+    // height: 40px;
+    }
+    .be-msg-box-icon {
+      margin: 20px auto;
+    }
+    .be-msg-box-icon-circle {
+      width: 100px;
+      height: 100px;
+    }
+    .be-msg-box-content {
+      line-height: 1.8;
+      font-size: 20px;
+    }
+    .be-msg-btn {
+      .be-button.be-btn-size-medium {
+        font-size: 20px;
+      }
+    }
   }
 }
 </style>
