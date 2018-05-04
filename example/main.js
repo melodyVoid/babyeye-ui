@@ -13,6 +13,9 @@ MessageBox.alert({
   size: 'large'
 }).then(() => console.log(2))
 
+setTimeout(() => {
+  MessageBox.close()
+}, 3000)
 Vue.use(BabyeyeUI)
 // Vue.use(Button)
 
