@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" v-if="isShow" :class="[size === 'large' ? 'large' : '']">
+  <div class="be-msg-box-wrapper" v-if="isShow" :class="[size === 'large' ? 'large' : '']">
     <div class="be-msg-box">
       <div class="be-msg-box-title">{{ title }}</div>
       <div class="be-msg-box-icon" :class="iconClass">
@@ -55,7 +55,7 @@ export default {
 }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
-.wrapper {
+.be-msg-box-wrapper {
   width: 100%;
   height: 100vh;
   position: absolute;

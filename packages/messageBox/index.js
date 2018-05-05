@@ -4,16 +4,6 @@ import MessageBox from './src/main.vue'
 MessageBox.install = Vue => {
   Vue.component(MessageBox.name, MessageBox)
 }
-const alert = Vue.extend(MessageBox)
-  
-const component = new alert({
-  data: null,
-  mounted() {
-    this.$on('click', () => {
-      resolve()
-    })
-  }
-}).$mount()
 
 MessageBox.alert = (options = { title: '', icon: '', message: '', size: ''}) => {
   return new Promise(resolve => {
@@ -26,12 +16,21 @@ MessageBox.alert = (options = { title: '', icon: '', message: '', size: ''}) => 
         size: ''
       }
     }
-    Object.assign(component.$data, options)
+    const alert = Vue.extend(MessageBox)
+  
+    const component = new alert({
+      data: options
+    }).$mount()
+    // Object.assign(component.$data, options)
+    component.$on('click', resolve)
+    component.$el.style.height = document.body.offsetHeight + 'px'
     document.querySelector('body').appendChild(component.$el)
   })
 }
 
 MessageBox.close = () => {
-  component.$data.isShow = false
+  // component.$data.isShow = false
+  const oMsg = document.querySelector('.be-msg-box-wrapper')
+  oMsg.style.display = 'none'
 }
 export default MessageBox
