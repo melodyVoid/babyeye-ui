@@ -79,3 +79,10 @@ MessageBox.alert({
 })
 ```
 
+此外，还添加了关闭 MessageBox 的方法
+
+```
+MessageBox.close()
+```
+
+调用此方法即可立即关闭 MessageBox
