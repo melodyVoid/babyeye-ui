@@ -31,6 +31,6 @@ MessageBox.alert = (options = { title: '', icon: '', message: '', size: ''}) => 
 MessageBox.close = () => {
   // component.$data.isShow = false
   const oMsg = document.querySelector('.be-msg-box-wrapper')
-  oMsg.style.display = 'none'
+  oMsg && (oMsg.style.display = 'none')
 }
 export default MessageBox
