@@ -165,6 +165,28 @@ export default {
     float: right;
     margin: 10px 30px 10px;
   }
+  .sen {
+    margin: 15px auto;
+    border-collapse:collapse;
+    border-spacing:0;
+    th {
+      border-bottom: 1px solid #fff;
+    }
+    td, th {
+      width: 30%;
+      padding: 5px 0;
+    }
+  }
+  .vergence {
+    margin: 15px auto;
+    border-collapse:collapse;
+    border-spacing:0;
+    td, th {
+      // width: 25%;
+      border: 1px solid #fff;
+      padding: 5px 20px 10px;
+    }
+  }
 }
 
 .large {
@@ -192,27 +214,8 @@ export default {
         font-size: 20px;
       }
     }
-    .sen {
-      margin: 15px auto;
-      border-collapse:collapse;
-      border-spacing:0;
-      th {
-        border-bottom: 1px solid #fff;
-      }
-      td, th {
-        width: 30%;
-        padding: 5px 0;
-      }
-    }
-    .vergence {
-      margin: 15px auto;
-      border-collapse:collapse;
-      border-spacing:0;
-      td, th {
-        // width: 25%;
-        border: 1px solid #fff;
-        padding: 5px 20px 10px;
-      }
+    .sen, .vergence {
+      font-size: 18px;
     }
   }
 }
