@@ -2,11 +2,58 @@
   <div class="be-msg-box-wrapper" v-if="isShow" :class="[size === 'large' ? 'large' : '']">
     <div class="be-msg-box">
       <div class="be-msg-box-title">{{ title }}</div>
-      <div class="be-msg-box-icon" :class="iconClass">
-      </div>
+      <div class="be-msg-box-icon" :class="iconClass"></div>
       <div class="be-msg-box-content" v-for="(item, index) of msg" :key="index">
         {{ item }}
       </div>
+      <table class="sen" v-if="sensitivity && typeof sensitivity === 'object'">
+        <tr>
+          <th>空间频率</th>
+          <th>对比敏感度(右)</th>
+          <th>对比敏感度(左)</th>
+        </tr>
+        <tr>
+          <td>1.5</td>
+          <td>{{ sensitivity.OD['1.5'] }}</td>
+          <td>{{ sensitivity.OS['1.5'] }}</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>{{ sensitivity.OD['3'] }}</td>
+          <td>{{ sensitivity.OS['3'] }}</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>{{ sensitivity.OD['6'] }}</td>
+          <td>{{ sensitivity.OS['6'] }}</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>{{ sensitivity.OD['12'] }}</td>
+          <td>{{ sensitivity.OS['12'] }}</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>{{ sensitivity.OD['18'] }}</td>
+          <td>{{ sensitivity.OS['18'] }}</td>
+        </tr>
+      </table>
+      <table class="vergence" v-if="vergence && typeof vergence === 'object'">
+        <tr>
+          <th></th>
+          <th>模糊点</th>
+          <th>破裂点</th>
+          <th>恢复点</th>
+        </tr>
+        <tr>
+          <td>BI</td>
+          <td v-for="(BI, index) of vergence.BI" :key="index">{{ BI }}</td>
+        </tr>
+        <tr>
+          <td>BO</td>
+          <td v-for="(BO, index) of vergence.BO" :key="index">{{ BO }}</td>
+        </tr>
+      </table>
       <div class="be-msg-btn">
         <be-button @click="close" :italic="btnItalic" :size="btnSize">确定</be-button>
       </div>
@@ -25,7 +72,9 @@ export default {
       icon: '',
       isShow: true,
       btnItalic: false,
-      size: ''
+      size: '',
+      sensitivity: null,
+      vergence: null
     }
   },
   computed: {
@@ -141,6 +190,28 @@ export default {
     .be-msg-btn {
       .be-button.be-btn-size-medium {
         font-size: 20px;
+      }
+    }
+    .sen {
+      margin: 15px auto;
+      border-collapse:collapse;
+      border-spacing:0;
+      th {
+        border-bottom: 1px solid #fff;
+      }
+      td, th {
+        width: 30%;
+        padding: 5px 0;
+      }
+    }
+    .vergence {
+      margin: 15px auto;
+      border-collapse:collapse;
+      border-spacing:0;
+      td, th {
+        // width: 25%;
+        border: 1px solid #fff;
+        padding: 5px 20px 10px;
       }
     }
   }
