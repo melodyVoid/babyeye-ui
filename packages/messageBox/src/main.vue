@@ -157,6 +157,9 @@ export default {
   .be-icon-stecheck {
     background-image: url("../../../public/img/icon/icon-stecheck.png");
   }
+  .be-icon-snr {
+    background-image: url("../../../public/img/icon/icon-snr.png");
+  }
   .be-msg-box-content {
     line-height: 1.8;
     font-size: 16px;
