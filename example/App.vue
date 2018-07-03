@@ -6,11 +6,11 @@
     <be-button italic  @click="isDialogVisible=!isDialogVisible" >显示dialog</be-button>
 
     <!-- <be-msg></be-msg> -->
-    <!-- <be-dialog title="test" icon='fourlamp' :isVisible.sync="isDialogVisible">
+    <be-dialog title="test" icon='fourlamp' :isVisible.sync="isDialogVisible">
       <img src="./assets/logo.png">
-      <be-button>Something</be-button>
+      <be-button @click.enter="isDialogVisible=!isDialogVisible">Something</be-button>
       <div slot="footer">Hello</div>
-    </be-dialog> -->
+    </be-dialog>
   </div>
 </template>
 
