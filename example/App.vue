@@ -3,12 +3,13 @@
     <img src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <be-button size="large" italic round disabled @click="handleClick" >哈哈hhhhhhh</be-button> -->
+    <be-button italic  @click="isDialogVisible=!isDialogVisible" >显示dialog</be-button>
 
     <!-- <be-msg></be-msg> -->
     <be-dialog title="test" icon='fourlamp' :isVisible.sync="isDialogVisible">
       <img src="./assets/logo.png">
-      <be-button>Something</be-button>
-      <!-- <div slot="footer">Hello</div> -->
+      <be-button @click.enter="isDialogVisible=!isDialogVisible">Something</be-button>
+      <div slot="footer">Hello</div>
     </be-dialog>
   </div>
 </template>
