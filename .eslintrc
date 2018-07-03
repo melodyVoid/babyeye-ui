@@ -3,5 +3,9 @@
   "extends": [
     "plugin:vue/essential",
     "@vue/airbnb"
-  ]
+  ],
+  "rules": {
+    "semi": [1, "never"],
+    "comma-dangle": [1, "never"]
+  }
 }
