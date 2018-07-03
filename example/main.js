@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 
 import * as BabyeyeUI from '../packages'
-// import { Button } from '../packages'
+import { Button } from '../packages'
 
 const { MessageBox } = BabyeyeUI
 
@@ -41,7 +41,7 @@ MessageBox.alert({
 //   MessageBox.close()
 // }, 3000)
 Vue.use(BabyeyeUI)
-// Vue.use(Button)
+Vue.use(Button)
 
 Vue.config.productionTip = false;
 

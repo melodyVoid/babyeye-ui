@@ -33,6 +33,24 @@
 | btnItalic | 按钮是否斜体 |   Boolean    |                             -                             | false  |                                                       |
 |   size    |     尺寸     |    String    |                          large/                           |   -    | 如果设置 size 为 large,则显示为大弹框，否则是普通弹框 |
 
+## Dialog 对话框
+
+### Options
+
+|   参数    |     说明     |     类型     |                          可选值                           | 默认值 |                         说明                          |
+| :-------: | :----------: | :----------: | :-------------------------------------------------------: | :----: | :---------------------------------------------------: |
+|   title   |     标题     |    String    |                             -                             |   -    |             如果不配置 title 属性，则为空             |
+|  message  |     内容     | String/Array |                             -                             |   -    |   如果显示一条信息传字符串，如果显示多条信息传数组    |
+|   icon    |     图标     |    String    | eyecheck/eyeposition/foutlamp/fusion/sensitivity/stecheck |   -    |                                                       |
+| btnItalic | 按钮是否斜体 |   Boolean    |                             -                             | false  |                                                       |
+|   size    |     尺寸     |    String    |                          large/                           |   -    | 如果设置 size 为 large,则显示为大弹框，否则是普通弹框 |
+|   isVisible    |     是否显示     |    Boolean    |                          -                           |   true    | 由父组件的属性控制是否显示，需在v-bind的时候加上sync修饰符 |
+
+Slot
+|   参数    |     说明     |
+| :-------: | :---------: |
+| 默认 | 默认Slot会插入内容区域 |
+| footer | footer Slot会插入底部区域 |
 ### Notice
 
 该组件的调用方式是全局方法。
