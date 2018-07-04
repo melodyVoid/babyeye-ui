@@ -6,10 +6,17 @@
     <be-button italic  @click="isDialogVisible=!isDialogVisible" >显示dialog</be-button>
 
     <!-- <be-msg></be-msg> -->
-    <be-dialog title="test" icon='fourlamp' :isVisible.sync="isDialogVisible">
-      <img src="./assets/logo.png">
-      <be-button @click.enter="isDialogVisible=!isDialogVisible">Something</be-button>
-      <div slot="footer">Hello</div>
+    <be-dialog title="表格测试" :isVisible.sync="isDialogVisible">
+      <be-table
+        :data="tableData"
+        :column="[
+          {label: '日期', prop: 'date', width: '150px'},
+          {label: '姓名', prop: 'name', width: '150px'},
+          {label: '省份', prop: 'province', width: '75px'},
+          {label: '邮编', prop: 'zip'},
+        ]"
+        small
+      />
     </be-dialog>
   </div>
 </template>
@@ -23,7 +30,7 @@ export default {
   components: {
     HelloWorld,
     'be-dialog': BabyeyeUI.Dialog,
-    'be-button': BabyeyeUI.Button
+    'be-table': BabyeyeUI.Table
   },
   methods: {
     handleClick() {
@@ -32,7 +39,33 @@ export default {
   },
   data() {
     return {
-      isDialogVisible: true
+      isDialogVisible: true,
+      tableData: [{
+        id: 1,
+        date: '2016-05-03',
+        name: '王小虎',
+        province: '上海',
+        zip: 200333,
+        tel: '13800138000'
+      }, {
+        id: 2,
+        date: '2016-05-02',
+        name: '王小虎',
+        province: '上海',
+        zip: 200333
+      }, {
+        id: 3,
+        date: '2016-05-04',
+        name: '王小虎',
+        province: '上海',
+        zip: 200333
+      }, {
+        id: 4,
+        date: '2016-05-01',
+        name: '王小虎',
+        province: '上海',
+        zip: 200333
+      }]
     }
   },
   mounted() {

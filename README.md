@@ -46,11 +46,56 @@
 |   size    |     尺寸     |    String    |                          large/                           |   -    | 如果设置 size 为 large,则显示为大弹框，否则是普通弹框 |
 |   isVisible    |     是否显示     |    Boolean    |                          -                           |   true    | 由父组件的属性控制是否显示，需在v-bind的时候加上sync修饰符 |
 
-Slot
+### Slot
 |   参数    |     说明     |
 | :-------: | :---------: |
 | 默认 | 默认Slot会插入内容区域 |
 | footer | footer Slot会插入底部区域 |
+
+## Table 展示型表格
+
+### Options
+
+#### column
+Type: Array
+Default: []
+Normal: [columnItem, columnItem, ...]
+
+columnItem: {
+  label[String]: 显示在表格中的表头,
+  prop[String]: 数据在data数组中dataItem中的属性名,
+  width[String]: 可选，固定表格宽度，css宽度值格式字符串
+}
+Example: [{label: '姓名', prop: 'name', width: '300px'}, {label: '学号', prop: 'stuid'}]
+
+#### data
+Type: Array
+Default: []
+Normal: [dataItem, dataItem, ...]
+
+dataItem: {
+  id[String]: 唯一标识符，推荐填写否则Vue报错,
+  ...(自行添加的数据，未登记在columnItem中的属性名将不被显示)
+}
+Example: [{id: 1, name: '李狗蛋'， stuid: '9527'}, {id: 2, name: '王二傻'， stuid: '9528'}]
+#### small
+Type: Boolean
+Default: false
+
+小表格样式
+
+#### noline
+Type: Boolean
+Default: false
+
+无线表格样式
+
+#### border
+Type: Boolean
+Default: false
+
+包边表格样式
+
 ### Notice
 
 该组件的调用方式是全局方法。
