@@ -15,7 +15,7 @@
           {label: '省份', prop: 'province', width: '75px'},
           {label: '邮编', prop: 'zip'},
         ]"
-        small
+        noline
       />
     </be-dialog>
   </div>

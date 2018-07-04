@@ -48,10 +48,13 @@ export default {
   border-collapse: collapse;
   border-spacing: 0;
   th {
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #22c4fc;
   }
   td, th {
     padding: 5px 10px;
+  }
+  td {
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
   }
 }
 .be-table-border {
@@ -63,6 +66,9 @@ export default {
   td, th {
     padding: 0;
     font-size: 0.9em;
+  }
+  td {
+    border: none;
   }
 }
 .be-table-noline {
