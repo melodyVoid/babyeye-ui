@@ -1,11 +1,13 @@
 import Button from './button'
 import MessageBox from './messageBox'
 import Dialog from './dialog'
+import Table from './table'
 
 const components = [
   Button,
   MessageBox,
-  Dialog
+  Dialog,
+  Table
 ]
 
 const install = (Vue = {}) => {
@@ -23,5 +25,6 @@ export {
   install,
   Button,
   MessageBox,
-  Dialog
+  Dialog,
+  Table
 }

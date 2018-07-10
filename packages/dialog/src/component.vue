@@ -98,7 +98,7 @@ export default {
   z-index: 998;
 }
 .be-dialog {
-  width: 420px;
+  min-width: 420px;
   position: fixed;
   padding: 10px;
   color: #fff;
