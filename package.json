@@ -4,7 +4,7 @@
   "private": false,
   "description": "A babyeye ui lib implement by Vue",
   "author": "Dylan <botao@babyeye.com>",
-  "main": "dist/index.js",
+  "main": "dist/babyeye-ui.js",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
