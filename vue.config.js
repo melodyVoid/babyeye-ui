@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   // Project deployment base
   // By default we assume your app will be deployed at the root of a domain,
@@ -6,10 +7,10 @@ module.exports = {
   // sub-path here. For example, if your app is deployed at
   // https://www.foobar.com/my-app/
   // then change this to '/my-app/'
-  baseUrl: '/',
+  // baseUrl: '/',
 
   // where to output built files
-  outputDir: 'dist',
+  // outputDir: 'dist',
 
   // whether to use eslint-loader for lint on save.
   // valid values: true | false | 'error'
@@ -26,6 +27,18 @@ module.exports = {
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === 'production') {
       // mutate config for production...
+    
+      config.entry = {
+        'babyeye-ui': './packages/index.js'
+      }
+      config.output = {
+          path: path.resolve(__dirname, 'dist'),
+          filename: '[name].js',
+          library: 'babyeye-ui',
+          libraryTarget: 'umd',
+          umdNamedDefine: true
+      }
+      config.plugins = []
     } else {
       // mutate for development...
       config.entry = './example/main.js'
@@ -42,7 +55,7 @@ module.exports = {
   // CSS related options
   css: {
     // extract CSS in components into a single CSS file (only in production)
-    extract: true,
+    extract: false,
 
     // enable CSS source maps?
     sourceMap: false,

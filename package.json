@@ -4,7 +4,7 @@
   "private": false,
   "description": "A babyeye ui lib implement by Vue",
   "author": "Dylan <botao@babyeye.com>",
-  "main": "packages/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
@@ -29,7 +29,8 @@
   "homepage": "https://melodyvoid.github.io/babyeye-ui",
   "files": [
     "packages",
-    "public"
+    "public",
+    "dist"
   ],
   "license": "MIT",
   "dependencies": {
